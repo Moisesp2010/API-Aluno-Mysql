@@ -1,0 +1,32 @@
+{"properties": [
+  {
+    "name": "pring.datasource.url",
+    "type": "java.lang.String",
+    "description": "A description for 'pring.datasource.url'"
+  },
+  {
+    "name": "spring.datasource.testWhileIdle",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.testWhileIdle'"
+  },
+  {
+    "name": "spring.jpa.hibernate.naming-strategy",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.jpa.hibernate.naming-strategy'"
+  },
+  {
+    "name": "spring.datasource.validationQuery",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.validationQuery'"
+  },
+  {
+    "name": "spring.datasource.validationQuery",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.validationQuery'"
+  },
+  {
+    "name": "spring.datasource.validationQuery",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.validationQuery'"
+  }
+]}

@@ -1,0 +1,4 @@
+com\aula\restapi\RestapiApplication.class
+com\aula\restapi\database\RepositorioContato.class
+com\aula\restapi\ContatoRest.class
+com\aula\restapi\entidade\Contato.class
