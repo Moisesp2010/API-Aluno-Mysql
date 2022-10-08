@@ -1,0 +1,40 @@
+version: '3.7'
+
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: app-mysql
+    restart: always
+    ports:
+      - 3307:3307
+    environment:
+      MYSQL_ROOT_PASSWORD: rot123
+      MYSQL_DATABASE: aula
+    volumes:
+      - ./mysql:/var/lib/mysql
+    cap_add:
+      - SYS_NICE
+    networks:
+      - spring
+
+  springboot:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    container_name: app-springboot
+    image: springboot
+    restart: always
+    depends_on:
+      - mysql
+    ports:
+      - 9191:8081
+      - 5005:5005
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/aula
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=rot123
+    networks:
+      - spring
+networks:
+    spring:
+      driver: bridge
